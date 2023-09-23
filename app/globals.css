@@ -2,26 +2,262 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body::-webkit-scrollbar {
+    display: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+body *,
+html {
+    color: #131126;
+    font-weight: 400;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer components {
+    .display-large-medium {
+        @apply font-medium text-6xl text-neutral-900 leading-[72px] -tracking-[0.02em];
+    }
+
+    .display-large-semi-bold {
+        @apply font-semibold text-6xl text-neutral-900 leading-[72px] -tracking-[0.02em];
+    }
+
+    .display-large-bold {
+        @apply font-bold text-6xl text-neutral-900 leading-[72px] -tracking-[0.02em];
+    }
+
+    .display-large-extra-bold {
+        @apply font-extrabold text-6xl text-neutral-900 leading-[72px] -tracking-[0.02em];
+    }
+
+    .display-small-medium {
+        @apply font-medium text-[44px] leading-[48px] -tracking-[0.02em];
+    }
+
+    .display-small-semi-bold {
+        @apply font-semibold text-[44px] text-neutral-900 leading-[48px] -tracking-[0.02em];
+    }
+
+    .display-small-bold {
+        @apply font-bold text-[44px] text-neutral-900 leading-[48px] -tracking-[0.02em];
+    }
+
+    .display-small-extra-bold {
+        @apply font-extrabold text-[44px] text-neutral-900 leading-[48px] -tracking-[0.02em];
+    }
+
+    .heading-h1-medium-desktop {
+        @apply font-medium text-[40px] text-neutral-900 leading-[48px] -tracking-[0.02em];
+    }
+
+    .heading-h1-semi-bold-desktop {
+        @apply font-semibold text-[40px] text-neutral-900 leading-[48px] -tracking-[0.02em];
+    }
+
+    .heading-h1-bold-desktop {
+        @apply font-bold text-[40px] text-neutral-900 leading-[48px] -tracking-[0.02em];
+    }
+
+    .heading-h1-extra-bold-desktop {
+        @apply font-extrabold text-[40px] text-neutral-900 leading-[48px] -tracking-[0.02em];
+    }
+
+    .heading-h2-medium-desktop {
+        @apply font-medium text-4xl text-neutral-900 leading-[44px] -tracking-[0.02em];
+    }
+
+    .heading-h2-semi-bold-desktop {
+        @apply font-semibold text-4xl text-neutral-900 leading-[44px] -tracking-[0.02em];
+    }
+
+    .heading-h2-bold-desktop {
+        @apply font-bold text-4xl text-neutral-900 leading-[44px] -tracking-[0.02em];
+    }
+
+    .heading-h2-extra-bold-desktop {
+        @apply font-extrabold text-4xl text-neutral-900 leading-[44px] -tracking-[0.02em];
+    }
+
+    .heading-h3-medium-desktop {
+        @apply font-medium text-[32px] text-neutral-900 leading-10 -tracking-[0.02em];
+    }
+
+    .heading-h3-semi-bold-desktop {
+        @apply font-semibold text-[32px] text-neutral-900 leading-10 -tracking-[0.02em];
+    }
+
+    .heading-h3-bold-desktop {
+        @apply font-bold text-[32px] text-primary-500 leading-10 -tracking-[0.02em];
+    }
+
+    .heading-h3-extra-bold-desktop {
+        @apply font-extrabold text-[32px] text-neutral-900 leading-10 -tracking-[0.02em];
+    }
+
+    .heading-h4-medium-desktop {
+        @apply font-medium text-[28px] text-neutral-900 leading-9 -tracking-[0.02em];
+    }
+
+    .heading-h4-semi-bold-desktop {
+        @apply font-semibold text-[28px] text-neutral-900 leading-9 -tracking-[0.02em];
+    }
+
+    .heading-h4-bold-desktop {
+        @apply font-bold text-[28px] text-neutral-900 leading-9 -tracking-[0.02em];
+    }
+
+    .heading-h4-extra-bold-desktop {
+        @apply font-extrabold text-[28px] text-neutral-900 leading-9 -tracking-[0.02em];
+    }
+
+    .heading-h5-medium-desktop {
+        @apply font-medium text-2xl text-neutral-900 leading-8 -tracking-[0.02em];
+    }
+
+    .heading-h5-semi-bold-desktop {
+        @apply font-semibold text-2xl text-neutral-900 leading-8 -tracking-[0.02em];
+    }
+
+    .heading-h5-bold-desktop {
+        @apply font-bold text-2xl text-neutral-900 leading-8 -tracking-[0.02em];
+    }
+
+    .heading-h5-extra-bold-desktop {
+        @apply font-extrabold text-2xl text-neutral-900 leading-8 -tracking-[0.02em];
+    }
+
+    .heading-h6-medium-desktop {
+        @apply font-medium text-xl text-neutral-900 leading-7 -tracking-[0.02em];
+    }
+
+    .heading-h6-semi-bold-desktop {
+        @apply font-semibold text-xl text-neutral-900 leading-7 -tracking-[0.02em];
+    }
+
+    .heading-h6-bold-desktop {
+        @apply font-bold text-xl text-neutral-900 leading-7 -tracking-[0.02em];
+    }
+
+    .heading-h6-extra-bold-desktop {
+        @apply font-extrabold text-xl text-neutral-900 leading-7 -tracking-[0.02em];
+    }
+
+    .heading-h6-medium-mobile {
+        @apply font-medium text-lg text-neutral-900 leading-6 -tracking-[0.02em];
+    }
+
+    .heading-h6-semi-bold-mobile {
+        @apply font-semibold text-lg text-neutral-900 leading-6 -tracking-[0.02em];
+    }
+
+    .heading-h6-bold-mobile {
+        @apply font-bold text-lg text-neutral-900 leading-6 -tracking-[0.02em];
+    }
+
+    .heading-h6-extra-bold-mobile {
+        @apply font-extrabold text-lg text-neutral-900 leading-6 -tracking-[0.02em];
+    }
+
+    .paragraph-large-regular {
+        @apply font-normal text-lg text-neutral-900 leading-7;
+    }
+
+    .paragraph-large-medium {
+        @apply font-medium text-lg text-neutral-900 leading-7;
+    }
+
+    .paragraph-large-semi-bold {
+        @apply font-semibold text-lg text-neutral-900 leading-7;
+    }
+
+    .paragraph-large-underline {
+        @apply font-normal text-lg text-neutral-900 leading-7 underline;
+    }
+
+    .paragraph-large-strikethrough {
+        @apply font-normal text-lg text-neutral-900 leading-7 line-through;
+    }
+
+    .paragraph-large-italic {
+        @apply font-normal text-lg text-neutral-900 leading-7 italic;
+    }
+
+    .paragraph-medium-regular {
+        @apply font-normal text-base text-neutral-900 leading-6;
+    }
+
+    .paragraph-medium-medium {
+        @apply font-medium text-base text-neutral-900 leading-6;
+    }
+
+    .paragraph-medium-semi-bold {
+        @apply font-semibold text-base text-neutral-900 leading-6;
+    }
+
+    .paragraph-medium-underline {
+        @apply font-normal text-base text-neutral-900 leading-6 underline;
+    }
+
+    .paragraph-medium-strikethrough {
+        @apply font-normal text-base text-neutral-900 leading-6 line-through;
+    }
+
+    .paragraph-medium-italic {
+        @apply font-normal text-base text-neutral-900 leading-6 italic;
+    }
+
+    .paragraph-small-regular {
+        @apply font-normal text-sm text-neutral-900 leading-5;
+    }
+
+    .paragraph-small-medium {
+        @apply font-medium text-sm text-neutral-900 leading-5;
+    }
+
+    .paragraph-small-semi-bold {
+        @apply font-semibold text-sm text-neutral-900 leading-5;
+    }
+
+    .paragraph-small-underline {
+        @apply font-normal text-sm text-neutral-900 leading-5 underline;
+    }
+
+    .paragraph-small-strikethrough {
+        @apply font-normal text-sm text-neutral-900 leading-5 line-through;
+    }
+
+    .paragraph-small-italic {
+        @apply font-normal text-sm text-neutral-900 leading-5 italic;
+    }
+
+    .paragraph-x-small-regular {
+        @apply font-normal text-xs text-neutral-900 leading-5;
+    }
+
+    .paragraph-x-small-medium {
+        @apply font-medium text-xs text-neutral-900 leading-5;
+    }
+
+    .paragraph-x-small-semi-bold {
+        @apply font-semibold text-xs text-neutral-900 leading-5;
+    }
+
+    .paragraph-x-small-underline {
+        @apply font-normal text-xs text-neutral-900 leading-5 underline;
+    }
+
+    .paragraph-x-small-strikethrough {
+        @apply font-normal text-xs text-neutral-900 leading-5 line-through;
+    }
+
+    .paragraph-x-small-italic {
+        @apply font-normal text-xs text-neutral-900 leading-5 italic;
+    }
+
+    .paragraph-overline-small {
+        @apply font-semibold text-xs text-neutral-900 leading-5 tracking-[1px];
+    }
+
+    .paragraph-overline-large {
+        @apply font-semibold text-sm text-neutral-900 leading-5 tracking-[1px];
+    }
 }
