@@ -4,19 +4,19 @@ import visitingCard1 from "../../../Assests/card1.png";
 import Link from "next/link";
 
 export default function Banner(props) {
-    const { bgGradientFrom, bgGradientTo, bgGradianVia, title, price, index } = props;
+    const { bgGradient, title, price, index } = props;
 
     const handleClickShop = () => {
         navigate;
     };
 
     return (
-        <div className="" style={{ backgroundImage: `linear-gradient(to top left,${bgGradientFrom}, ${bgGradientTo})` }}>
-            <div className={`h-[500px] mx-auto max-w-[1330px] w-full flex justify-between ${index % 2 === 0 ? "flex-row" : "flex-row-reverse"} px-14 pt-[100px]`}>
+        <section style={{ backgroundImage: `linear-gradient(${bgGradient})` }}>
+            <div className={`h-[500px] mx-auto max-w-[1330px] w-full flex justify-between ${index % 2 === 0 ? "flex-row" : "flex-row-reverse"} px-12 pt-[100px]`}>
                 <div className="w-fit">
                     <p className="text-[84px] text-[#1a2024] font-bold">{title}</p>
                     <p className="text-[30px] leading-10 text-[#1a2024]">
-                        Starting from <span className=" font-semibold">₹{price}*</span>
+                        Starting from <span className="font-semibold">₹{price}*</span>
                     </p>
                     <Link href="/categories">
                         <div className="group bg-black w-fit rounded-xl px-4 mt-6">
@@ -33,9 +33,9 @@ export default function Banner(props) {
                 </div>
 
                 <div>
-                    <Image src={visitingCard1} height={300} />
+                    <Image src={visitingCard1} height={300} alt="card" />
                 </div>
             </div>
-        </div>
+        </section>
     );
 }

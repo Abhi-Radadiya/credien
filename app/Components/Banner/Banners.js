@@ -1,18 +1,32 @@
 import React from "react";
 import Banner from "./Components/Banner";
+import CategoriesSection from "./Components/CategoriesSection";
+import visitingCard from "../../Assests/visitingCard.png";
 
 export default function Banners() {
     const banners = [
-        { bgGradientFrom: "#FFFFFF", bgGradientTo: "#d0fefe", title: "Visiting Card", price: 999 },
-        { bgGradientFrom: "#fff1d6", bgGradientTo: "#FFFFFF", title: "Envalope", price: 999 },
-        { bgGradientFrom: "#FFFFFF", bgGradientTo: "#dfeeeb", title: "Logo", price: 999 },
-        { bgGradientFrom: "#ede8f9", bgGradientTo: "#FFFFFF", title: "Cover letter", price: 999 },
+        {
+            bgGradient: "#edfefe, #eeffff",
+            title: "Visiting Card",
+            price: 999,
+            categories: [
+                { type: "Standard", price: 499, image: visitingCard },
+                { type: "Classic", price: 999, image: visitingCard },
+                { type: "Business", price: 1199, image: visitingCard },
+            ],
+        },
+        { bgGradient: "#fffefd, #fff2da", title: "Envalope", price: 999 },
+        { bgGradient: "#ffffff, #f2edff", title: "Cover letter", price: 999 },
+        { bgGradient: "#ffffff, #dfeeeb", title: "Logo", price: 999 },
     ];
 
     return (
         <>
             {banners.map((el, index) => (
-                <Banner {...el} index={index} />
+                <React.Fragment key={index}>
+                    <Banner bgGradient={el.bgGradient} title={el.title} price={el.price} index={index} />
+                    <CategoriesSection categories={el.categories} />
+                </React.Fragment>
             ))}
         </>
     );
