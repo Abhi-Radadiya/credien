@@ -52,7 +52,7 @@ export default function Dropdown(props) {
                             } border-neutral-300 ${height ?? "h-12"} ${selectedItemStyle ?? "paragraph-small-regular"}`}
                         >
                             <span className={selectedItemColor}>{menuItem}</span>
-                            <Image src={downArrowIcon} className="drop-down-icon-rotate" height={24} width={24} />
+                            <Image src={downArrowIcon} className="drop-down-icon-rotate" height={24} width={24} alt="card" />
                             {/* <DownArrowIcon className="drop-down-icon-rotate" height={24} width={24} fill={disabl    ed ? "#D3D2D8" : "#131126"} /> */}
                         </Menu.Button>
                     </div>

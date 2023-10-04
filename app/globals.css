@@ -86,7 +86,7 @@ html {
     }
 
     .heading-h3-bold-desktop {
-        @apply font-bold text-[32px] text-primary-500 leading-10 -tracking-[0.02em];
+        @apply font-bold text-[32px] leading-10 -tracking-[0.02em];
     }
 
     .heading-h3-extra-bold-desktop {

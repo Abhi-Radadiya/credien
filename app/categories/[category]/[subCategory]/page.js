@@ -6,6 +6,7 @@ import Dropdown from "@/app/Components/Dropdown/Dropdown";
 import OverviewSection from "../../Components/OverviewSection";
 import SpecificationSection from "../../Components/SpecificationSection.js";
 import FAQSection from "../../Components/FAQSection.js";
+import { FocusButton } from "@/app/Components/Buttons/Buttons";
 
 export default function SubCategory({ params }) {
     const subCategory = params.subCategory;
@@ -70,20 +71,14 @@ export default function SubCategory({ params }) {
                                 </Link>
                             </li>
                         </ul>
+
                         <div className="my-3">
                             <Dropdown selectedItem="Standard" label="Select corner type" menuItems={["Standard", "Rounded"]} />
                         </div>
+
                         <Dropdown placeholder="Please select quantity" label="Select quantity" menuItems={["1000 pcs. from ₹299", "1500 pcs. from ₹599", "2000 pcs. from ₹699"]} />
 
-                        <Link href={`/template/${subCategory}`} className="relative group bg-black w-full mx-auto justify-center flex rounded-xl px-4 mt-6">
-                            <button className="bg-transparent pb-2 pt-1 rounded-lg">
-                                <div className="text-white pr-3 text-xl font-bold mb-1 w-fit transition duration-300">
-                                    Browse designs
-                                    <span className="origin-right block max-w-0 group-hover:max-w-full transition-all duration-500 h-[1px] bg-white w-full"></span>
-                                </div>
-                                <div className="text-white pr-3 text-xs">Choose one of our template</div>
-                            </button>
-                        </Link>
+                        <FocusButton label="Browse designs" tag="Choose one of our template" href={`/template/${subCategory}`} />
                     </div>
                 </div>
             </section>
