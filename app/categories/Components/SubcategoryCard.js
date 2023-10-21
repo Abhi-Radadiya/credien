@@ -1,6 +1,6 @@
 import React from "react";
 import visitingCard from "../../Assests/visitingCard.png";
-import starLogo from "../../Assests/star.svg";
+import StarLogo from "../../Assests/star.svg";
 import Image from "next/image";
 
 export default function SubcategoryCard(props) {
@@ -24,7 +24,8 @@ export default function SubcategoryCard(props) {
                     </div>
                     <div className="flex flex-row">
                         <div className="flex flex-row items-center border-r border-neutral-700 pr-3 mr-3">
-                            <Image src={starLogo} width={20} alt="card" />
+                            <StarLogo />
+                            {/* <Image src={starLogo} width={20} alt="card" /> */}
                             <span className="font-medium pl-2.5 text-sm">{stars}</span>
                         </div>
                         <strong>{reviews}</strong>

@@ -2,7 +2,6 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import visitingCard from "../../Assests/visitingCard.png";
-import starLogo from "../../Assests/star.svg";
 import SubcategoryCard from "../Components/SubcategoryCard";
 import Link from "next/link";
 
