@@ -1,6 +1,6 @@
 import React from "react";
-import userIcon from "../Assests/user.svg";
-import cartIcon from "../Assests/cart.svg";
+import UserIcon from "../Assests/user.svg";
+import CartIcon from "../Assests/cart.svg";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -41,10 +41,10 @@ export default function Navbar() {
                             </li>
                         </ul>
                         <Link href="/user" className="mr-6 cursor-pointer">
-                            <Image src={userIcon} alt="user" />
+                            <UserIcon />
                         </Link>
                         <Link href="/cart" className="cursor-pointer">
-                            <Image src={cartIcon} alt="cart" />
+                            <CartIcon />
                         </Link>
                     </div>
                 </div>

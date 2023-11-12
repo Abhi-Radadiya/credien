@@ -1,7 +1,7 @@
 "use client";
 import React, { Fragment, useEffect, useState } from "react";
 import { Menu, Transition } from "@headlessui/react";
-import downArrowIcon from "@/app/Assests/down-arrow.svg";
+import DownArrowIcon from "@/app/Assests/down-arrow.svg";
 import Image from "next/image";
 
 export default function Dropdown(props) {
@@ -52,8 +52,8 @@ export default function Dropdown(props) {
                             } border-neutral-300 ${height ?? "h-12"} ${selectedItemStyle ?? "paragraph-small-regular"}`}
                         >
                             <span className={selectedItemColor}>{menuItem}</span>
-                            <Image src={downArrowIcon} className="drop-down-icon-rotate" height={24} width={24} alt="card" />
-                            {/* <DownArrowIcon className="drop-down-icon-rotate" height={24} width={24} fill={disabl    ed ? "#D3D2D8" : "#131126"} /> */}
+                            <DownArrowIcon className="drop-down-icon-rotate" height={24} width={24} />
+                            {/* <Image src={downArrowIcon} className="drop-down-icon-rotate" height={24} width={24} alt="card" /> */}
                         </Menu.Button>
                     </div>
                     <Transition

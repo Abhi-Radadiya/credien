@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import dashImage from "../../Assests/dash.svg";
 import Accordian from "./Accordian";
 
 export default function FAQSection() {

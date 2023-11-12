@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
-import starLogo from "../../../Assests/star.svg";
+import StarLogo from "../../../Assests/star.svg";
 
 export default function CategoryCard(props) {
     const { price, type, image } = props;
@@ -22,7 +22,7 @@ export default function CategoryCard(props) {
                             <span className="text-[14px] font-bold">1000 pcs.</span>
                         </div>
                         <div className="flex flex-row items-center">
-                            <Image src={starLogo} width={20} alt="star" />
+                            <StarLogo />
                             <span className="font-medium pl-2.5 text-sm">4.5</span>
                         </div>
                     </div>
