@@ -133,6 +133,7 @@ const SlopedRectangle = () => {
                             value={input.number}
                         />
                     </div>
+
                     <div className="absolute right-0 bottom-[30px]">
                         <SingleInput
                             bounds={{ left: -60, top: -80, right: 0, bottom: 30 }}
